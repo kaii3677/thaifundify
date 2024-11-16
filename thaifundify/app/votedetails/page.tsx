@@ -3,26 +3,30 @@ import React from "react";
 export default function VoteDetails() {
   return (
     <div className="bg-gray-900 text-gray-100 min-h-screen">
-     
 
       {/* Project Header */}
-      <div className="bg-gray-800 border-b border-blue-500/30">
+      <div className="bg-gray-800 border-b border-blue-500/30"
+        style={{ backgroundImage: `url('/financialbg.jpg')` }}
+>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex items-center justify-between">
             <div>
               <div className="flex items-center space-x-4 mb-2">
-                <h1 className="text-3xl font-bold">Decentralized Education Platform</h1>
-                <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">
+                <h1 className="text-3xl font-bold"
+                style={{ color: "#111827" }}>Decentralized Education Platform</h1>
+                <span className="px-3 py-1 bg-blue-500/50 text-white-300 rounded-full text-sm">
                   Education
                 </span>
               </div>
-              <p className="text-gray-400">
+              <p className="mt-2"
+               style={{ color: "#45526C" }}>
                 Building Web3 learning infrastructure for the next generation
               </p>
             </div>
             <div className="text-right">
               <div className="text-3xl font-bold text-blue-400">42,156</div>
-              <div className="text-sm text-gray-400">Total Votes</div>
+              <div className="text-sm"  style={{ color: "#45526C" }}>Total Votes</div>
             </div>
           </div>
         </div>
@@ -132,9 +136,12 @@ export default function VoteDetails() {
                     </div>
                   </div>
 
-                  <button className="w-full px-4 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg transition-colors font-medium">
-                    Cast Vote
-                  </button>
+                  <button
+          type="submit"
+          className="w-full py-3 rounded-lg bg-gradient-to-r from-[#7d57a3] to-[#536ca9] text-white font-semibold hover:from-[#563477] hover:to-[#3a4e80] transition-transform transform hover:scale-105 shadow-lg"
+          >
+          Cast Vote
+        </button>
                 </div>
               </div>
 

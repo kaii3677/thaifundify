@@ -71,8 +71,8 @@ export default function Component() {
         </div>
       </main>
 
-      <footer className="bg-gray-100 py-6">
-        <div className="container mx-auto px-4 text-center text-gray-600">
+      <footer className="bg-gray-800 text-center text-gray-400 py-4">
+        <div >
           <p>&copy; 2023 Project Donation Platform. All rights reserved.</p>
         </div>
       </footer>
