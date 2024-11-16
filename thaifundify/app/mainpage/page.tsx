@@ -13,6 +13,12 @@ export default function Mainpage() {
     // Correct the path to navigate to the mainpage
     router.push('/donation');  // Navigate to the MainPage using the correct route path
   };
+
+  const gotofinancial = () => {
+    // Correct the path to navigate to the mainpage
+    router.push('/financial');  // Navigate to the MainPage using the correct route path
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       
@@ -34,7 +40,7 @@ export default function Mainpage() {
 
         {/* Financial Aids Card */}
         <Card className="bg-gray-200">
-          <div className="p-6 flex items-center justify-between">
+          <div onClick ={gotofinancial} className="p-6 flex items-center justify-between">
             <div>
               <h2 className="text-xl font-semibold mb-1">Financial Aids</h2>
               <p className="text-gray-600">

@@ -16,8 +16,8 @@ export default function Navbar() {
         {/* Navbar Links */}
         <nav className="flex items-center space-x-6">
           <Link
-            href="/home"
-            className={pathname === '/home' ? 'active' : 'hover:text-gray-200'}
+            href="/mainpage"
+            className={pathname === '/mainpage' ? 'active' : 'hover:text-gray-200'}
           >
             Home
           </Link>
