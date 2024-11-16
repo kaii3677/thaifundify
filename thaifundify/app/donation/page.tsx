@@ -6,9 +6,9 @@ export default function Donation() {
   const router = useRouter();
 
   const donationCategories = [
-    { id: 1, src: '/d1.png', alt: 'Category 1' },
-    { id: 2, src: '/d11.png', alt: 'Category 2' },
-    { id: 3, src: '/d2.png', alt: 'Category 3' },
+    { id: 1, src: '/d1.png', alt: 'Category 1', title: 'Tabung Harapan Malaysia' },
+    { id: 2, src: '/d11.png', alt: 'Category 2', title: 'eBelia' },
+    { id: 3, src: '/d2.png', alt: 'Category 3', title: 'Food Aid Foundation' },
   ];
 
   const handleGridItemClick = (id: number) => {
@@ -17,26 +17,14 @@ export default function Donation() {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      {/* Navigation Bar */}
-      <div className="w-full h-16 bg-black text-white flex items-center justify-between px-4 sm:px-6 lg:px-8">
-        <h1 className="text-lg font-bold">Donation Platform</h1>
-        <nav>
-          <ul className="flex space-x-4">
-            <li><a href="#" className="hover:text-gray-300">Home</a></li>
-            <li><a href="#" className="hover:text-gray-300">About</a></li>
-            <li><a href="#" className="hover:text-gray-300">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-
       {/* Image Box */}
       <div className="w-full relative">
         <Image
-          src="/donationB.png"
+          src="/donationB1.png"
           alt="Donation Banner"
-          width={1500} // Adjust the width based on your image's aspect ratio
-          height={200} // Adjust the height based on your image's aspect ratio
-          objectFit="contain" // Ensures the whole image fits without cropping
+          width={1700}
+          height={200}
+          objectFit="contain"
         />
       </div>
 
@@ -48,17 +36,24 @@ export default function Donation() {
           {donationCategories.map((item) => (
             <div
               key={item.id}
-              className="flex justify-center items-center"
+              className="flex flex-col justify-center items-center space-y-4 cursor-pointer"
               onClick={() => handleGridItemClick(item.id)}
             >
-              <Image
-                src={item.src}
-                alt={item.alt}
-                width={1500}
-                height={1500}
-                objectFit="cover"
-                className="rounded-lg"
-              />
+              {/* Image */}
+              <div className="relative w-full h-[178px]"> {/* This fixes the height for horizontal images */}
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  layout="fill"  // Makes the image fill its parent container
+                  objectFit="cover"  // Ensures the image covers the entire area without distortion
+                  className="rounded-lg"
+                />
+              </div>
+
+              {/* Textbox below image */}
+              <div className="text-center bg-[#162F2F] p-3 rounded-full shadow-md">
+                <h3 className="text-xl font-semibold text-white">{item.title}</h3>
+              </div>
             </div>
           ))}
         </div>
@@ -69,7 +64,6 @@ export default function Donation() {
         <div className="text-center">
           <h2 className="text-xl sm:text-2xl lg:text-5xl font-bold mb-6">317,918 +</h2>
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-6">People From Around the World Donated</h2>
-
         </div>
       </div>
     </div>
