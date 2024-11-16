@@ -1,9 +1,18 @@
+'use client';
+
 import { Button } from "@/app/components/ui/Button"
 import { Card } from "@/app/components/ui/Card"
 import Link from "next/link"
 import { Menu } from 'lucide-react'
+import { useRouter } from 'next/navigation';
 
 export default function Mainpage() {
+  const router = useRouter();
+
+  const gotodonation = () => {
+    // Correct the path to navigate to the mainpage
+    router.push('/donation');  // Navigate to the MainPage using the correct route path
+  };
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
@@ -34,7 +43,7 @@ export default function Mainpage() {
       <main className="flex-1 max-w-7xl mx-auto px-4 py-8 space-y-4 w-full">
         {/* Donation Card */}
         <Card className="bg-gray-200">
-          <div className="p-6 flex items-center space-x-6">
+          <div onClick ={gotodonation}  className="p-6 flex items-center space-x-6">
             <div className="w-16 h-16 bg-black shrink-0" />
             <div>
               <h2 className="text-xl font-semibold mb-1">Donation</h2>
