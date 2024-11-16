@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function Component() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-[#D8F9FF] via-[#D8F9FF] to-[#EFE0FF] animate-gradient-bg">
       <main className="flex-grow container mx-auto px-4 py-8 md:py-12">
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Project Image and Details */}
@@ -48,7 +48,7 @@ export default function Component() {
           <div className="flex justify-center">
             <Button
               className="bg-[#162F2F] hover:bg-[#162F2F]/90 text-white px-6 py-3 rounded-full text-lg"
->
+            >
               Donate Now
             </Button>
           </div>
