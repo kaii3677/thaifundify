@@ -19,6 +19,11 @@ export default function Mainpage() {
     router.push('/financial');  // Navigate to the MainPage using the correct route path
   };
 
+  const gotovote = () => {
+    // Correct the path to navigate to the mainpage
+    router.push('/vote');  // Navigate to the MainPage using the correct route path
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       
@@ -53,7 +58,7 @@ export default function Mainpage() {
 
         {/* Vote for Projects Card */}
         <Card className="bg-gray-200">
-          <div className="p-6 flex items-center space-x-6">
+          <div onClick ={gotovote} className="p-6 flex items-center space-x-6">
             <div className="w-16 h-16 bg-black shrink-0" />
             <div>
               <h2 className="text-xl font-semibold mb-1">Vote for Projects</h2>

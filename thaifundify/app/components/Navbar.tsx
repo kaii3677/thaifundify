@@ -28,14 +28,14 @@ export default function Navbar() {
             Donation
           </Link>
           <Link
-            href="/financial-aids"
-            className={pathname === '/financial-aids' ? 'active' : 'hover:text-gray-200'}
+            href="/financial"
+            className={pathname === '/financial' ? 'active' : 'hover:text-gray-200'}
           >
             Financial Aids
           </Link>
           <Link
-            href="/voting"
-            className={pathname === '/voting' ? 'active' : 'hover:text-gray-200'}
+            href="/vote"
+            className={pathname === '/vote' ? 'active' : 'hover:text-gray-200'}
           >
             Voting
           </Link>
