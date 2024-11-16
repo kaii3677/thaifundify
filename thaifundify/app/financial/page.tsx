@@ -14,23 +14,30 @@ export default function Financial() {
     <div className="bg-gray-900 text-gray-100 min-h-screen z-index-9">
 
       {/* Hero Banner */}
-      <div className="relative bg-gray-800 overflow-hidden">
+      <div 
+        className="relative bg-cover bg-center overflow-hidden"
+        style={{
+          backgroundImage: "url('/financialaidsB.png')", // Set background image path
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="relative z-10 py-8 sm:py-16 md:py-20 lg:py-24">
-            <div className="text-center">
+            <div className="text-center text-white">
               <h1 className="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-6xl">
-                <span className="block text-blue-400">Decentralized</span>
-                <span className="block">Financial Aid Platform</span>
+              <span className="block text-[#151E30]">Decentralized</span>
+              <span className="block">Financial Aid Platform</span>
               </h1>
-              <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl">
+              <p className="mt-3 text-base sm:text-lg sm:max-w-xl sm:mx-auto md:text-xl">
                 Transparent, secure, and accessible financial assistance through blockchain technology
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center">
                 <div className="rounded-md shadow">
                   <a
                     href="#"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-500 hover:bg-blue-600 md:py-4 md:text-lg md:px-10"
-                  >
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-[#151E30] hover:bg-[#1A2739] md:py-4 md:text-lg md:px-10"
+                    >
                     Apply Now
                   </a>
                 </div>
@@ -46,7 +53,7 @@ export default function Financial() {
           Available Financial Aid Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Project Card 1 */}
+          {/* Project Cards */}
           <ProjectCard
             title="Education Grant Pool"
             status="Active"
@@ -58,7 +65,6 @@ export default function Financial() {
             onApply={handleFinancial}
           />
 
-          {/* Project Card 2 */}
           <ProjectCard
             title="Startup Funding"
             status="New"
@@ -70,7 +76,6 @@ export default function Financial() {
             onApply={handleFinancial}
           />
 
-          {/* Project Card 3 */}
           <ProjectCard
             title="Research Grant"
             status="Closing Soon"
