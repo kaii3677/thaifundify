@@ -1,9 +1,19 @@
+'use client';
+
+import { useRouter } from 'next/navigation';  // Use next/navigation for the router
 import { Button } from "@/app/components/ui/Button";
 import { Card, CardContent } from "@/app/components/ui/Card";
 import Link from "next/link";
 import Image from 'next/image';
 
 export default function Login() {
+  const router = useRouter();
+
+  const handleConnectWallet = () => {
+    // Correct the path to navigate to the mainpage
+    router.push('/mainpage');  // Navigate to the MainPage using the correct route path
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
@@ -34,12 +44,12 @@ export default function Login() {
 
         {/* Connect Wallet Button */}
         <div className="flex justify-center mb-12">
-        <Button
-          className="bg-[#0B4D1E] hover:bg-[#0B4D1E]/90 text-white px-8 py-6 text-lg rounded-full"
-        >
-          Connect Wallet
-        </Button>
-
+          <Button
+            onClick={handleConnectWallet}
+            className="bg-[#0B4D1E] hover:bg-[#0B4D1E]/90 text-white px-8 py-6 text-lg rounded-full"
+          >
+            Connect Wallet
+          </Button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
