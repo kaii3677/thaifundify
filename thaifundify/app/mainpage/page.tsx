@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Menu, HandHeart, Wallet, Vote, ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
+
 export default function Mainpage() {
   const router = useRouter();
 
@@ -26,22 +27,21 @@ export default function Mainpage() {
       {/* Hero Section */}
       <header className="container mx-auto px-4 py-20 text-center">
         <h1 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-          Empower Change Through Web3
+          Empower Change Through Fundify
         </h1>
-        <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-          Join our decentralized platform to make a difference through transparent donations, 
-          financial aid distribution, and community-driven decision making.
+        <p className="text-xl text-slate-300 mb-8 max-w-6xl mx-auto text-justify leading-relaxed">
+          Fundify leverages blockchain technology to transform fund distribution with unparalleled transparency.
+          By using a secure and immutable ledger, we provide clear, real-time visibility into how funds are
+          allocated and utilized. This innovative approach ensures that every transaction is fully traceable
+          and verifiable, fostering trust and accountability between donors and recipients.
         </p>
-        <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 rounded-lg text-lg">
-          Connect Wallet
-        </Button>
       </header>
 
       {/* Features Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-3 gap-8">
           {/* Donation Card */}
-          <Card  className="bg-slate-800 border-slate-700 hover:border-blue-500 transition-all cursor-pointer">
+          <Card className="bg-slate-800 border-slate-700 hover:border-blue-500 transition-all cursor-pointer">
             <div onClick={gotodonation} className="flex flex-col items-center p-6">
               <HandHeart className="w-12 h-12 text-blue-500 mb-4" />
               <h2 className="text-2xl text-white">Transparent Donations</h2>
@@ -49,7 +49,7 @@ export default function Mainpage() {
                 Make direct cryptocurrency donations with full transparency. Track your impact 
                 through blockchain technology.
               </p>
-              <Button variant="outline" className="group">
+              <Button variant="outline" className="group border-[#C274C2] text-[#C274C2] hover:bg-[#F096F0] hover:text-[#420354]">
                 Start Donating
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -58,14 +58,14 @@ export default function Mainpage() {
 
           {/* Financial Aid Card */}
           <Card className="bg-slate-800 border-slate-700 hover:border-purple-500 transition-all cursor-pointer">
-            <div onClick={gotofinancial}  className="flex flex-col items-center p-6">
+            <div onClick={gotofinancial} className="flex flex-col items-center p-6">
               <Wallet className="w-12 h-12 text-purple-500 mb-4" />
               <h2 className="text-2xl text-white">Financial Aid</h2>
               <p className="text-slate-300 mb-6">
                 Apply for or distribute financial aid using smart contracts. Ensure fair and 
                 immediate fund distribution.
               </p>
-              <Button variant="outline" className="group">
+              <Button variant="outline" className="group border-[#C274C2] text-[#C274C2] hover:bg-[#F096F0] hover:text-[#420354]">
                 Explore Aid Programs
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -73,7 +73,7 @@ export default function Mainpage() {
           </Card>
 
           {/* Voting Card */}
-          <Card  className="bg-slate-800 border-slate-700 hover:border-green-500 transition-all cursor-pointer">
+          <Card className="bg-slate-800 border-slate-700 hover:border-green-500 transition-all cursor-pointer">
             <div onClick={gotovote} className="flex flex-col items-center p-6">
               <Vote className="w-12 h-12 text-green-500 mb-4" />
               <h2 className="text-2xl text-white">Community Voting</h2>
@@ -81,7 +81,7 @@ export default function Mainpage() {
                 Participate in decentralized governance. Vote on proposals and help shape 
                 the future of our platform.
               </p>
-              <Button variant="outline" className="group">
+              <Button variant="outline" className="group border-[#C274C2] text-[#C274C2] hover:bg-[#F096F0] hover:text-[#420354]">
                 View Proposals
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
