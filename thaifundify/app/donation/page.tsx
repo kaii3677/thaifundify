@@ -1,24 +1,31 @@
+'use client';
+
+import { useRouter } from 'next/navigation'; // Import useRouter from next/navigation
 import { Button } from "@/app/components/ui/Button";
 
 export default function Donation() {
+  const router = useRouter(); // Initialize useRouter from next/navigation
+
+  const handleGridItemClick = (id: number) => {
+    // Navigate to the project details page when a grid item is clicked
+    router.push(`/donationdetails`);
+  };
+
   return (
     <div className="min-h-screen bg-gray-100 p-4">
       <div className="max-w-md mx-auto space-y-8">
-        {/* Header */}
-        <div className="bg-gray-200 rounded-lg p-8 text-center">
-          <h1 className="text-xl font-semibold text-gray-800">
-            Contribute to the Society
-          </h1>
-        </div>
 
         {/* Donation Categories */}
         <div className="grid grid-cols-4 gap-4">
           {[1, 2, 3, 4].map((item) => (
             <div
               key={item}
-              className="aspect-square bg-gray-200 rounded-lg"
+              className="aspect-square bg-gray-200 rounded-lg cursor-pointer"
               aria-label={`Donation category ${item}`}
-            />
+              onClick={() => handleGridItemClick(item)} // Add onClick to handle navigation
+            >
+              {/* You can add images, icons, or text to represent each category */}
+            </div>
           ))}
         </div>
 
@@ -55,5 +62,5 @@ export default function Donation() {
         </div>
       </div>
     </div>
-  )
+  );
 }

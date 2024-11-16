@@ -16,17 +16,6 @@ export default function Login() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header */}
-      <header className="bg-[#0B4D1E] text-white">
-        <nav className="max-w-7xl mx-auto px-4 py-4 flex justify-end space-x-6">
-          <Link href="/our-service" className="hover:text-gray-200">
-            Our Service
-          </Link>
-          <Link href="/contact-us" className="hover:text-gray-200">
-            Contact Us
-          </Link>
-        </nav>
-      </header>
 
       {/* Main Content */}
       <main className="flex-1 max-w-7xl mx-auto px-4 py-8 w-full">

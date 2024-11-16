@@ -15,29 +15,7 @@ export default function Mainpage() {
   };
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header */}
-      <header className="bg-[#0B4D1E] text-white">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Menu className="w-6 h-6" />
-          <nav className="flex items-center space-x-6">
-            <Link href="/home" className="hover:text-gray-200">
-              Home
-            </Link>
-            <Link href="/donation" className="hover:text-gray-200">
-              Donation
-            </Link>
-            <Link href="/financial-aids" className="hover:text-gray-200">
-              Financial Aids
-            </Link>
-            <Link href="/voting" className="hover:text-gray-200">
-              Voting
-            </Link>
-            <button className="border-2 border-white text-white hover:bg-white/10 px-4 py-2 rounded-md">
-                User Access
-            </button>
-          </nav>
-        </div>
-      </header>
+      
 
       {/* Main Content */}
       <main className="flex-1 max-w-7xl mx-auto px-4 py-8 space-y-4 w-full">

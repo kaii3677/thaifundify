@@ -19,3 +19,29 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Sticky Navbar style */
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10; /* Ensure it's on top of other elements */
+  background-color: #0B4D1E; /* Navbar background color */
+  padding: 1rem; /* Optional: Adjust the padding if needed */
+}
+
+/* Add custom styles for active links */
+nav ul li a.active {
+  font-weight: bold;
+  color: #FFD700; /* Example active link color */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #FFD700; /* Highlight on hover */
+}
