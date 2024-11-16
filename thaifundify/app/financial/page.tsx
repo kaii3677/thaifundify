@@ -26,8 +26,8 @@ export default function Financial() {
           <div className="relative z-10 py-8 sm:py-16 md:py-20 lg:py-24">
             <div className="text-center text-white">
               <h1 className="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-6xl">
-              <span className="block text-[#151E30]">Decentralized</span>
-              <span className="block">Financial Aid Platform</span>
+                <span className="block text-[#151E30]">Decentralized</span>
+                <span className="block">Financial Aids Platform</span>
               </h1>
               <p className="mt-3 text-base sm:text-lg sm:max-w-xl sm:mx-auto md:text-xl">
                 Transparent, secure, and accessible financial assistance through blockchain technology
@@ -50,7 +50,7 @@ export default function Financial() {
       {/* Available Projects */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-3xl font-bold mb-8 text-center">
-          Available Financial Aid Projects
+          Available Financial Aids Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Project Cards */}
@@ -79,7 +79,7 @@ export default function Financial() {
           <ProjectCard
             title="Research Grant"
             status="Closing Soon"
-            statusClass="bg-yellow-500/20 text-yellow-300"
+            statusClass="bg-red-500/20 text-red-300"
             description="Funding for blockchain research and development in emerging technologies."
             totalPool="750,000 USDC"
             applications="85/100"
@@ -100,7 +100,7 @@ interface ProjectCardProps {
   totalPool: string;
   applications: string;
   progress: number;
-  onApply: () => void; // Add a prop type for the click handler
+  onApply: () => void; 
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -111,39 +111,44 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   totalPool,
   applications,
   progress,
-  onApply, // Destructure the `onApply` prop
+  onApply,
 }) => {
   return (
-    <div className="bg-gray-800 rounded-xl p-6 border border-blue-500/30 hover:border-blue-500/60 transition-colors">
+    <div className="bg-gray-800 rounded-xl p-6 border-4 border-white hover:border-white transition-colors">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-xl font-bold text-blue-400">{title}</h3>
-        <span className={`px-3 py-1 rounded-full text-sm ${statusClass}`}>
+        <h3 className="text-xl font-bold text-[#3AA089] text-center w-full"> {/* Added font-bold for bold text */}
+          {title}
+        </h3>
+        <span
+          className={`flex items-center justify-center px-3 py-1 rounded-full text-xs whitespace-nowrap ${statusClass}`}
+        >
           {status}
         </span>
       </div>
-      <p className="text-gray-300 mb-4">{description}</p>
+      <p className="text-gray-300 mb-4 text-center">{description}</p>
       <div className="space-y-2">
         <div className="flex justify-between">
           <span className="text-gray-400">Total Pool</span>
-          <span className="text-blue-300">{totalPool}</span>
+          <span className="text-[#277F6B]">{totalPool}</span>
         </div>
         <div className="flex justify-between">
           <span className="text-gray-400">Applications</span>
-          <span className="text-blue-300">{applications}</span>
+          <span className="text-[#277F6B]">{applications}</span>
         </div>
         <div className="w-full bg-gray-700 rounded-full h-2 mt-2">
           <div
-            className="bg-blue-500 h-2 rounded-full"
-            style={{ width: `${progress}%` }}
+            className="h-2 rounded-full"
+            style={{ width: `${progress}%`, backgroundColor: "#A4F4F4" }}
           ></div>
         </div>
       </div>
       <button
-        onClick={onApply} // Use the `onApply` prop here
-        className="w-full mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg transition-colors"
+        onClick={onApply}
+        className="w-full mt-4 px-3 py-1 bg-[#3AA089] hover:bg-[#3AA089] rounded-lg transition-colors"
       >
         Apply Now
       </button>
     </div>
   );
 };
+
