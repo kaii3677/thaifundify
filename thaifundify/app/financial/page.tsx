@@ -11,7 +11,7 @@ export default function Financial() {
   };
 
   return (
-    <div className="bg-gray-900 text-gray-100 min-h-screen">
+    <div className="bg-gray-900 text-gray-100 min-h-screen z-index-9">
 
       {/* Hero Banner */}
       <div className="relative bg-gray-800 overflow-hidden">

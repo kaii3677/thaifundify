@@ -24,7 +24,7 @@ body {
 .sticky-navbar {
   position: sticky;
   top: 0;
-  z-index: 10; /* Ensure it's on top of other elements */
+  z-index: 99; /* Ensure it's on top of other elements */
   background-color: #0B4D1E; /* Navbar background color */
   padding: 1rem; /* Optional: Adjust the padding if needed */
 }

@@ -18,12 +18,12 @@ export default function Login() {
     <div className="min-h-screen flex flex-col">
 
       {/* Main Content */}
-      <main className="flex-1 max-w-7xl mx-auto px-4 py-8 w-full">
+      <main className="flex-1 max-w-7xl mx-auto px-0 py-0 w-full">
       {/* login Banner */}
         <div className="w-full h-50 mb-12 relative">
         <div className="image-wrapper">
                 <Image
-          src="/loginB2.png"
+          src="/loginB2.jpg"
           alt="Login Banner"
           layout="fill"
           objectFit="cover" // This will crop the image to fit the container while maintaining aspect ratio
