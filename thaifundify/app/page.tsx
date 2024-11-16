@@ -1,11 +1,13 @@
 import Image from "next/image";
-import { Hero } from "./components";
+import Login from "./login/page";
+
 
 export default function Home() {
   return (
     <main className="overflow-hidden">
-       <Hero />
+      <Login />
+      
     </main>
-    
   );
 }
+
