@@ -32,14 +32,29 @@ export default function Login() {
       <main className="flex-1 max-w-7xl mx-auto px-4 py-8 w-full">
       {/* login Banner */}
         <div className="w-full h-50 mb-12 relative">
-          <Image
-            src="/loginB2.png"
-            alt="Login Banner"
-            layout="responsive" // Ensures the image is responsive
-            width={1550} // Set a base width for the image
-            height={360} // Set a base height for the image
-            priority // Ensures faster loading for above-the-fold images
-          />
+        <div className="image-wrapper">
+                <Image
+          src="/loginB2.png"
+          alt="Login Banner"
+          layout="fill"
+          objectFit="cover" // This will crop the image to fit the container while maintaining aspect ratio
+          priority
+        />
+
+        </div>
+
+        <style jsx>{`
+          .image-wrapper {
+            max-width: 100%;
+            height: 500px; 
+            border-radius: 10px;
+            overflow: hidden; /* Optional: to prevent image overflow */
+            margin-top: -32px
+            
+          }
+        `}</style>
+
+
         </div>
 
         {/* Connect Wallet Button */}
