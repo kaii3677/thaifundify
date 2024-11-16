@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';  // Use next/navigation for the rou
 import { Button } from "@/app/components/ui/Button";
 import { Card, CardContent } from "@/app/components/ui/Card";
 import Link from "next/link";
+import Image from 'next/image';
 
 export default function Login() {
   const router = useRouter();
@@ -29,8 +30,17 @@ export default function Login() {
 
       {/* Main Content */}
       <main className="flex-1 max-w-7xl mx-auto px-4 py-8 w-full">
-        {/* Black Banner */}
-        <div className="w-full h-32 bg-black mb-12"></div>
+      {/* login Banner */}
+        <div className="w-full h-50 mb-12 relative">
+          <Image
+            src="/loginB2.png"
+            alt="Login Banner"
+            layout="responsive" // Ensures the image is responsive
+            width={1550} // Set a base width for the image
+            height={360} // Set a base height for the image
+            priority // Ensures faster loading for above-the-fold images
+          />
+        </div>
 
         {/* Connect Wallet Button */}
         <div className="flex justify-center mb-12">
@@ -46,7 +56,15 @@ export default function Login() {
           {/* Donation Card */}
           <Card className="bg-gray-100">
             <CardContent className="p-6 flex flex-col items-center text-center">
-              <div className="w-full aspect-square bg-black mb-4 rounded-lg" />
+            <div className="w-full aspect-square mb-4 rounded-lg relative">
+          <Image
+            src="/donation.png" 
+            alt="Donation"
+            layout="fill"            
+            objectFit="cover"        
+            className="rounded-lg"   
+          />
+        </div>
               <h3 className="font-semibold text-lg mb-2">Donation</h3>
               <p className="text-sm text-gray-600">
                 Support operational initiatives through secure and transparent tracking
@@ -55,20 +73,36 @@ export default function Login() {
           </Card>
 
           {/* Financial Aids Card */}
-          <Card className="bg-gray-100">
-            <CardContent className="p-6 flex flex-col items-center text-center">
-              <div className="w-full aspect-square bg-black mb-4 rounded-lg" />
-              <h3 className="font-semibold text-lg mb-2">Financial Aids</h3>
-              <p className="text-sm text-gray-600">
-                Apply for and receive financial assistance for various programs
-              </p>
-            </CardContent>
-          </Card>
+            <Card className="bg-gray-100">
+              <CardContent className="p-6 flex flex-col items-center text-center">
+                <div className="w-full aspect-square mb-4 rounded-lg relative">
+                  <Image
+                    src="/financialaids.png" // Replace with your actual image path
+                    alt="Financial Aids"
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-lg"
+                  />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">Financial Aids</h3>
+                <p className="text-sm text-gray-600">
+                  Apply for and receive financial assistance for various programs
+                </p>
+              </CardContent>
+            </Card>
 
           {/* Voting Card */}
           <Card className="bg-gray-100">
             <CardContent className="p-6 flex flex-col items-center text-center">
-              <div className="w-full aspect-square bg-black mb-4 rounded-lg" />
+              <div className="w-full aspect-square mb-4 rounded-lg relative">
+                <Image
+                  src="/voting.png" // Replace with your actual image path
+                  alt="Voting"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-lg"
+                />
+              </div>
               <h3 className="font-semibold text-lg mb-2">Voting</h3>
               <p className="text-sm text-gray-600">
                 Participate in decision-making processes through secure online voting
