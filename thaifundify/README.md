@@ -2,6 +2,10 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+1. npm install
+2. npm install lucide-react
+
+
 First, run the development server:
 
 ```bash
