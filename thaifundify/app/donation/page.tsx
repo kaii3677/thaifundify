@@ -20,7 +20,7 @@ export default function Donation() {
       {/* Image Box */}
       <div className="w-full relative">
         <Image
-          src="/donationB1.png"
+          src="/donationBBB.png"
           alt="Donation Banner"
           width={1700}
           height={200}

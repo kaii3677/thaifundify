@@ -1,6 +1,6 @@
 "use client"; // Mark this file as a client component
 
-import { Menu } from "lucide-react";
+import Image from "next/image"; 
 import Link from "next/link";
 import { usePathname } from "next/navigation"; // Import the hook to get the current path
 
@@ -10,9 +10,17 @@ export default function Navbar() {
   return (
     <header className="sticky-navbar bg-gradient-to-r from-[#111A2C] to-[#3A4F68] bg-opacity-90 text-white">
       <div className="max-w-7xl mx-auto px-4 py-1 flex items-center justify-between">
-        {/* Menu Icon */}
-        <Menu className="w-6 h-6 text-white" />
-        
+        {/* Logo Image (Clickable to mainpage) */}
+        <Link href="/mainpage">
+          <Image
+            src="/ethLogo.png" 
+            alt="Logo"
+            width={50} 
+            height={50} 
+            className="max-h-[50px]" // Limits the logo's height to avoid resizing the navbar
+          />
+        </Link>
+
         {/* Navbar Links */}
         <nav className="flex items-center space-x-8">
           <Link
